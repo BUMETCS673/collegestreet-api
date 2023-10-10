@@ -68,7 +68,7 @@ DATABASES = {
         'NAME': 'postgres',
         'HOST' : os.environ.get('SUPABASE_DB_HOST'),
         'PASSWORD': os.environ.get('SUPABASE_DB_PASS'),
-        'PORT': os.environ.get('SUPABASE_DB_PORT')
+        'PORT': os.environ.get('SUPABASE_DB_PORT'),
         'USER': 'postgres',
         'CERT' : 'config.prod-ca-2021.crt',
     }

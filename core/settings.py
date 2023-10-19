@@ -21,6 +21,12 @@ if ENV_FILE:
     load_dotenv(ENV_FILE)
 
 
+# Load Auth0 application settings into memory
+AUTH0_DOMAIN = os.environ.get("AUTH0_DOMAIN")
+AUTH0_CLIENT_ID = os.environ.get("AUTH0_CLIENT_ID")
+AUTH0_CLIENT_SECRET = os.environ.get("AUTH0_CLIENT_SECRET")
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -64,13 +70,13 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        # 'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
-        'HOST' : os.environ.get('SUPABASE_DB_HOST'),
-        'PASSWORD': os.environ.get('SUPABASE_DB_PASS'),
-        'PORT': os.environ.get('SUPABASE_DB_PORT'),
-        'USER': 'postgres',
-        'CERT' : 'config.prod-ca-2021.crt',
+        # 'HOST' : os.environ.get('SUPABASE_DB_HOST'),
+        # 'PASSWORD': os.environ.get('SUPABASE_DB_PASS'),
+        # 'PORT': os.environ.get('SUPABASE_DB_PORT'),
+        # 'USER': 'postgres',
+        # 'CERT' : 'config.prod-ca-2021.crt',
     }
 }
 
